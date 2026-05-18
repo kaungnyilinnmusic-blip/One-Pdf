@@ -48,26 +48,32 @@
             color: #ced6e0;
         }
 
-        /* Centered Layout for One Card */
+        /* Flexible Grid for Multiple Cards */
         .shop-container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            flex-wrap: wrap; 
+            gap: 40px; 
             padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
             flex: 1;
         }
 
-        /* Single Focused Product Card Layout */
+        /* Individual Product Card Layout */
         .product-card {
             background: #f1f2f6; 
             color: #2f3542;
-            padding: 35px;
+            padding: 25px;
             border-radius: 4px; 
             border: 6px solid #ced6e0;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             width: 100%;
-            max-width: 440px;
+            max-width: 320px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         /* Anime Poster Image Frame */
@@ -75,7 +81,7 @@
             border: 4px solid #2f3542;
             padding: 5px;
             background: white;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .product-image {
@@ -86,28 +92,29 @@
 
         .product-card h2 {
             font-family: 'Cinzel', serif;
-            font-size: 1.6rem;
-            margin: 15px 0 10px 0;
+            font-size: 1.4rem;
+            margin: 10px 0;
             color: #212529;
         }
 
         .description {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.6;
             color: #4b525d;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: left;
             background: #e4e7eb;
-            padding: 15px;
+            padding: 12px;
             border-radius: 4px;
             border-left: 4px solid #b33939;
+            flex-grow: 1;
         }
 
         .price {
-            font-size: 32px;
+            font-size: 26px;
             font-weight: 700;
             color: #b33939; 
-            margin: 15px 0 25px 0;
+            margin: 10px 0 15px 0;
         }
 
         /* Interactive Bounty-Style Button */
@@ -115,15 +122,15 @@
             display: block;
             background-color: #ffb142;
             color: #212529 !important;
-            padding: 15px 20px;
+            padding: 12px 20px;
             font-weight: bold;
             text-decoration: none;
             border-radius: 4px;
             text-transform: uppercase;
-            font-size: 1.1rem;
+            font-size: 1rem;
             letter-spacing: 1px;
             transition: transform 0.1s ease, background 0.2s;
-            box-shadow: 0 5px 0 #cc8e35;
+            box-shadow: 0 4px 0 #cc8e35;
         }
 
         .payhip-buy-button:hover {
@@ -151,37 +158,71 @@
 
     <header>
         <h1>One Pdf</h1>
-        <p>Premium digital download for true nakama.</p>
+        <p>Premium digital download collection for true nakama.</p>
     </header>
 
     <main class="shop-container">
         
-        <!-- SINGLE PDF ITEM -->
+        <!-- VOLUME 1 CARD -->
         <div class="product-card">
             <div class="wanted-frame">
-                <!-- Fallback to a placeholder image until you upload pdf-cover.jpg -->
-                <img src="https://placeholder.com" alt="One Piece PDF Guide" class="product-image">
+                <!-- Make sure to upload pdf-cover-1.jpg to GitHub -->
+                <img src="pdf-cover-1.jpg" alt="One Piece PDF V001" class="product-image">
             </div>
             <h2>One piece V001</h2>
-            
             <div class="description">
-                <strong>Unlock the secrets of the Grand Line with the ultimate fan-made companion dashboard!</strong> This high-quality, printable digital guide features custom layout graphics, comprehensive tracking checklists, and detailed chronological timelines built specifically for dedicated fans.
+                <strong>Unlock the secrets of the Grand Line!</strong> This high-quality digital guide features custom layout graphics, comprehensive tracking checklists, and detailed chronological timelines.
                 <br><br>
-                📣 <strong>100% Uncopyrighted & Open-Source:</strong> This document is an original, independent fan creation. It is entirely uncopyrighted and free from restrictive licensing. Once purchased, you own it completely—feel free to print infinite copies, share it with your nakama, or modify the layouts however you like!
+                📣 100% Uncopyrighted & Open-Source.
             </div>
-
             <p class="price">$9.99</p>
-            
-            <div id="payment-container">
-                <!-- Embedded Product Link Triggering the Checkout Popup Overlay -->
-                <a href="https://payhip.com" class="payhip-buy-button">Buy & Download PDF</a>
+            <div id="payment-container-1">
+                <a href="https://payhip.com" class="payhip-buy-button">Buy & Download</a>
+            </div>
+        </div>
+
+        <!-- VOLUME 2 CARD -->
+        <div class="product-card">
+            <div class="wanted-frame">
+                <!-- Make sure to upload pdf-cover-2.jpg to GitHub -->
+                <img src="pdf-cover-2.jpg" alt="One Piece PDF V002" class="product-image">
+            </div>
+            <h2>One piece V002</h2>
+            <div class="description">
+                <strong>The journey continues!</strong> Deep dive breakdown modules, hidden island maps, faction registries, and legendary item checklists tailored for true collectors.
+                <br><br>
+                📣 100% Uncopyrighted & Open-Source.
+            </div>
+            <p class="price">$9.99</p>
+            <div id="payment-container-2">
+                <!-- REPLACE THE LINK BELOW with your real Volume 2 Payhip Link -->
+                <a href="https://payhip.com" class="payhip-buy-button">Buy & Download</a>
+            </div>
+        </div>
+
+        <!-- VOLUME 3 CARD -->
+        <div class="product-card">
+            <div class="wanted-frame">
+                <!-- Make sure to upload pdf-cover-3.jpg to GitHub -->
+                <img src="pdf-cover-3.jpg" alt="One Piece PDF V003" class="product-image">
+            </div>
+            <h2>One piece V003</h2>
+            <div class="description">
+                <strong>Conquer the New World!</strong> Advanced end-game logs, combat power tier guides, custom printable journal dashboard layouts, and hidden arc secrets revealed.
+                <br><br>
+                📣 100% Uncopyrighted & Open-Source.
+            </div>
+            <p class="price">$9.99</p>
+            <div id="payment-container-3">
+                <!-- REPLACE THE LINK BELOW with your real Volume 3 Payhip Link -->
+                <a href="https://payhip.com" class="payhip-buy-button">Buy & Download</a>
             </div>
         </div>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 One Pdf. Your PDF is delivered safely and instantly via email right after purchase.</p>
+        <p>&copy; 2026 One Pdf. All products are delivered safely and instantly via email right after purchase.</p>
     </footer>
 
 </body>
